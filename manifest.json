@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "wiki-url-shortener",
+    "description": "日本語URLを省略する",
+    "version": "1.0",
+    "content_scripts": [{
+        "matches": ["https://*.wikipedia.org/*"],
+        "js": ["content_scripts.js"]
+    }],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "browser_action": {},
+    "permissions": [
+        "tabs",
+        "background",
+        "http://*/*",
+        "https://*/*"
+    ]
+}
