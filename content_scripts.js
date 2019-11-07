@@ -3,13 +3,11 @@ chrome.extension.onMessage.addListener(request => {
         const scripts = document.querySelectorAll('script');
         let articleId;
         scripts.forEach(v => {
-            // TODO: うまく取れてない気がする
-            const articleId = v.innerHTML.match(/wgArticleId.*?(\d+)/);
-            console.log(articleId);
-            if (articleId) {
-                this.articleId = articleId;
+            const scriptArticle = v.innerHTML.match(/wgArticleId.*?(\d+)/);
+            if (scriptArticle) {
+                articleId = scriptArticle[1];
             }
         })
-        console.log(articleId);
+        console.log(`${location.protocol}//${location.hostname}/?curid=${articleId}`)
     }
 }); 
