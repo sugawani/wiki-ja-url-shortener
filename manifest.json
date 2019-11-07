@@ -5,6 +5,11 @@
     "name": "wiki-url-shortener",
     "description": "wikipedia日本語URLを省略するやつ",
     "version": "1.0",
+    "icons": {
+        "16": "icons/16.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
+    },
     "content_scripts": [{
         "matches": ["https://*.wikipedia.org/*"],
         "js": ["content_scripts.js"]
