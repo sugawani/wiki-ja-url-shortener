@@ -8,6 +8,7 @@ chrome.extension.onMessage.addListener(request => {
                 articleId = scriptArticle[1];
             }
         })
-        console.log(`${location.protocol}//${location.hostname}/?curid=${articleId}`)
+        const url = `${location.protocol}//${location.hostname}/?curid=${articleId}`;
+        navigator.clipboard.writeText(url);
     }
 }); 
