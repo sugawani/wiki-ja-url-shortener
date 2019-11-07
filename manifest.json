@@ -1,7 +1,9 @@
 {
+    "author": "sugawani",
+    "homepage_url": "https://twitter.com/nek0roll",
     "manifest_version": 2,
     "name": "wiki-url-shortener",
-    "description": "日本語URLを省略する",
+    "description": "wikipedia日本語URLを省略するやつ",
     "version": "1.0",
     "content_scripts": [{
         "matches": ["https://*.wikipedia.org/*"],
@@ -12,10 +14,5 @@
         "persistent": false
     },
     "browser_action": {},
-    "permissions": [
-        "tabs",
-        "background",
-        "http://*/*",
-        "https://*/*"
-    ]
+    "permissions": ["tabs"]
 }
